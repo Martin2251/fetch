@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState, useEffect} from "react";
+import Loader from './components/Loader';
 
 import './App.css';
 
@@ -27,7 +28,7 @@ fetch('https://jsonplaceholder.typicode.com/todos')
   return (
     <div className="App">
       <>
-      {todos.length > 0 ?  todos.map((todo:Todo )=> console.log(todo.title)): ('Loading....')}
+      {todos.length > 0 ?  todos.map((todo:Todo )=> console.log(todo.title)): (<Loader  />)}
       </>
     </div>
   );
